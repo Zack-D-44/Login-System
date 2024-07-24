@@ -29,7 +29,7 @@ This is a fullstack app made using React on the frontend and Express on the back
 Currently the system only has two eligible users they are:
 - Username: zack
 - Password: zaack
-=====================
+-------------------------
 - Username: jake213
 - Password: 123jakle
 
