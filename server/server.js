@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 // Importing router, and middleware packages
-const {loginRouter} = require('./api/login');
+const {user} = require('./api/userApi');
 const cors = require('cors');
 const morgan = require('morgan');
 
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(morgan('dev'));
 
 //Mounting router to path
-app.use('/api',loginRouter);
+app.use('/api',user);
 
 
 // Start server listening on port 4000

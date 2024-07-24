@@ -1,7 +1,7 @@
 // Requiring express
 const express = require('express');
 // Creating Express Router
-const loginRouter = express.Router();
+const user = express.Router();
 
 //Array of user objects
 const users = [{
@@ -13,7 +13,7 @@ const users = [{
 }]
 
 //Route handling for get requests made to /api/login endpoint
-loginRouter.get('/login', (req, res, next) => {
+user.get('/login', (req, res, next) => {
     const user = req.query;
 
     //Looping through array checking to see if the current object has matching credentials
@@ -26,8 +26,23 @@ loginRouter.get('/login', (req, res, next) => {
     res.status(404).send();
 })
 
+// Handles adding new user
+user.post('/add-new-user', (req, res, next) => {
+    // Check if the values exist
+    let user = req.query;
+
+    if(user.uname && user.pwood){
+        users.append({username: req.uname, password: req.pwood});
+        res.status(201).send(users[users.length - 1]);
+    }else{
+        res.status(400).send();
+    }
+})
+
+
+
 // Exporting Router
 module.exports = {
-    loginRouter
+    user
 
 }
