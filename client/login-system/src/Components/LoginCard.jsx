@@ -23,7 +23,8 @@ export default function LoginCard() {
                     
                     // container.innerHTML = '';
                     // container.innerHTML = `<h1>Hello ${username}`
-                    navigate('/Logged-in')
+                    //passing username as part of the state
+                    navigate('/Logged-in', {state: {username}});
                     
                 }
                 
