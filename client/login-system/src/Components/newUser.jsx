@@ -12,7 +12,7 @@ export default function NewUserForm(){
             <label htmlFor="password-textbar">Enter new password:</label>
             <input type="text" id="password-textbar" />
             <br />
-            <button id="add-user">Login</button>
+            <button id="add-user">Add User</button>
         </div>
     );
 }
