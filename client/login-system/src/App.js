@@ -1,9 +1,10 @@
 import './App.css';
+import LoginCard from './Components/LoginCard';
 
 export default function App() {
   return (
-    <div>
-
+    <div className="App">
+      <LoginCard />
     </div>
   );
 }
