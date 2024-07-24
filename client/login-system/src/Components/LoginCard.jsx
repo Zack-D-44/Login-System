@@ -1,8 +1,14 @@
+import { Link, useNavigate } from "react-router-dom";
 import "../App.css"
 
 export default function LoginCard() {
+    // navigate hook // hooks can only be used/declared in component functions
+    const navigate = useNavigate();
+
     // Function that handles login button press
     function handlePress(){
+        
+
         // Getting password and username from form
         let password = document.getElementById('password-textbar').value;
         let username = document.getElementById('username-textbar').value;
@@ -13,10 +19,12 @@ export default function LoginCard() {
             if(response.ok){
                 // If request ok take away login screen 
                 if(response.status === 200){
-                    const container = document.getElementById('container');
+                    // const container = document.getElementById('container');
                     
-                    container.innerHTML = '';
-                    container.innerHTML = `<h1>Hello ${username}`
+                    // container.innerHTML = '';
+                    // container.innerHTML = `<h1>Hello ${username}`
+                    navigate('/Logged-in')
+                    
                 }
                 
             }else{
