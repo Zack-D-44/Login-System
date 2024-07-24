@@ -1,5 +1,5 @@
 import React from "react";
-import '../App.css';
+import './components.css'
 
 export default function NewUserForm(){
     
@@ -11,6 +11,8 @@ export default function NewUserForm(){
             <br />
             <label htmlFor="password-textbar">Enter new password:</label>
             <input type="text" id="password-textbar" />
+            <br />
+            <button id="add-user">Login</button>
         </div>
     );
 }
