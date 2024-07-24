@@ -35,7 +35,7 @@ Currently the system only has two eligible users they are:
 
 
 ## Future Development Of the Project
-I thoroughly enjoyed developing this app, becasue of this I plan to work on it it in the future. Below are some on the things that I will aim to acheive in the future development of this project:
+I thoroughly enjoyed developing this app, becasue of this I plan to work on it in the future. Below are some on the things that I will aim to acheive in the future development of this project:
 - Enhancing Password Secuirty
 - Database Intergration
 - User Registration
