@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-
+/* Styling login container */
 #Login-card-container {
   border: black solid 2px;
   width: 20%;
@@ -11,11 +11,11 @@
   padding-bottom: 40px; 
   margin-top: 40px; 
 }
-
+ 
 .login-textbar {
   margin-top: 12px;
 }
-
+/* Styling the login button */
 #login-button {
   padding: 12px;
   border-style: none;
@@ -26,14 +26,14 @@
   width: 30%;
   font-size: large;
 }
-
+/* Creating Pressing effect for login button */
 #login-button:active {
   transform: translate(0px, 2px);
 }
 
 
 
-
+/* Styling text inputs */
 #password-textbar, #username-textbar {
   margin-left: 12px;
   height: 30px;
