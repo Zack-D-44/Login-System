@@ -3,6 +3,27 @@ import './components.css'
 
 export default function NewUserForm(){
     
+    // make post request
+    function handleNewUser(){
+        // new username and password values
+        const newUserUsername = document.getElementById('username-textbar').value;
+        const newUserPassword = document.getElementById('password-textbar').value;
+
+        // make post request for user profile
+
+        fetch(`http://localhost:4000/api/add-new-user?uname=${newUserUsername}&pwood=${newUserPassword}`, {
+            method: "POST"
+        })
+        .then(response => {
+            if(response.ok){
+                console.log('New user added');
+            }
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    };
+
     return(
         <div className="new-user-form">
             {/* form for new user */}
@@ -12,7 +33,7 @@ export default function NewUserForm(){
             <label htmlFor="password-textbar">Enter new password:</label>
             <input type="text" id="password-textbar" />
             <br />
-            <button id="add-user">Add User</button>
+            <button id="add-user" onClick={handleNewUser}>Add User</button>
         </div>
     );
 }

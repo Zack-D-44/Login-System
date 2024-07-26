@@ -30,9 +30,11 @@ user.get('/login', (req, res, next) => {
 user.post('/add-new-user', (req, res, next) => {
     // Check if the values exist
     let user = req.query;
+    // console.log(user);
+    console.log(user.uname, user.pwood);
 
     if(user.uname && user.pwood){
-        users.append({username: req.uname, password: req.pwood});
+        users.push({username: user.uname, password: user.pwood});
         res.status(201).send(users[users.length - 1]);
     }else{
         res.status(400).send();

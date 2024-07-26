@@ -29,7 +29,7 @@ export default function LoginCard() {
                 }
                 
             }else{
-                console.log('Bad Response')
+                console.log('Bad Response:', response.status);
             }
         })
         // Attempting to catch error
