@@ -1,4 +1,25 @@
+.page-footer {
+    bottom: 0;
+    position: absolute;
+    background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    padding: 25px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: right;
+}
 
+#log-out-button {
+    background-color: #12674A;
+    border-style: none;
+    padding: 15px;
+    border-radius: 15px;
+    color: #ffffff;
+}
+
+#log-out-button:active {
+    transform: translate(0px, 2px);
+}
 
 .new-user-form {
     border: black solid 2px;

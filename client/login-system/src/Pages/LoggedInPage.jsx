@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import App from "../App";
 import { useLocation } from "react-router-dom";
 import NewUserForm from "../Components/newUser";
+import LoggedInFooter from "../Components/Footer";
 
 export default function LoggedInPage(){
     const location = useLocation();
@@ -29,7 +30,9 @@ export default function LoggedInPage(){
 
             {isNewUserFormVisible && <NewUserForm />}
 
+            <LoggedInFooter />
         </div>
+
         
     );
 }
