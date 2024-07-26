@@ -10,17 +10,19 @@ export default function NewUserForm(){
         const newUserPassword = document.getElementById('password-textbar').value;
 
         // make post request for user profile
-
+        
         fetch(`http://localhost:4000/api/add-new-user?uname=${newUserUsername}&pwood=${newUserPassword}`, {
             method: "POST"
         })
         .then(response => {
             if(response.ok){
+                // if user added log to console
                 console.log('New user added');
             }
         })
         .catch(err => {
-            console.log(err);
+            // log error 
+            console.log("When trying to add a new user there was a problem, this is the error", err);
         })
     };
 
